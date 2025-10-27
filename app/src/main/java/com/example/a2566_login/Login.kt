@@ -12,14 +12,14 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        val et_username: EditText = findViewById(R.id.et_username)
-        val et_password: EditText = findViewById(R.id.et_password)
-        val btn_login: Button = findViewById(R.id.et_btn_login)
-        val tv_register: TextView = findViewById(R.id.tv_register)
+        val etUsername: EditText = findViewById(R.id.et_username)
+        val etPassword: EditText = findViewById(R.id.et_password)
+        val btnLogin: Button = findViewById(R.id.btn_login)
+        val tvRegister: TextView = findViewById(R.id.tv_register)
 
         // Tombol Login
-        btn_login.setOnClickListener {
-            val username = et_username.text.toString()
+        btnLogin.setOnClickListener {
+            val username = etUsername.text.toString()
 
             val pindah = Intent(this, Dashboard::class.java)
             pindah.putExtra("nama", username)
@@ -27,7 +27,7 @@ class Login : AppCompatActivity() {
         }
 
         // TextView Register
-        tv_register.setOnClickListener {
+        tvRegister.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }

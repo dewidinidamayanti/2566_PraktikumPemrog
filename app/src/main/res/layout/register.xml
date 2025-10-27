@@ -9,16 +9,15 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Logo -->
         <ImageView
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:src="@drawable/logoamikom"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp" >
+        </ImageView>
 
-        <!-- Judul -->
         <TextView
             android:text="Registrasi"
             android:textSize="24sp"
@@ -28,7 +27,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
 
-        <!-- Nama Lengkap -->
         <EditText
             android:id="@+id/et_fullname"
             android:hint="Nama Lengkap"
@@ -36,7 +34,6 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName" />
 
-        <!-- Username -->
         <EditText
             android:id="@+id/et_register_username"
             android:hint="Username"
@@ -45,7 +42,6 @@
             android:layout_marginTop="8dp"
             android:inputType="textPersonName" />
 
-        <!-- Email -->
         <EditText
             android:id="@+id/et_register_email"
             android:hint="Email"
@@ -54,7 +50,7 @@
             android:layout_marginTop="8dp"
             android:inputType="textEmailAddress" />
 
-        <!-- Nomor Telepon -->
+
         <EditText
             android:id="@+id/et_phone"
             android:hint="Nomor Telepon"
@@ -63,7 +59,41 @@
             android:layout_marginTop="8dp"
             android:inputType="phone" />
 
-        <!-- Password -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:layout_marginTop="8dp"
+            android:textSize="18dp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="9dp"
+                android:id="@+id/jenkel">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Perempuan"
+                    android:textSize="16dp"
+                    android:id="@+id/rb_perempuan">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-Laki"
+                    android:textSize="16dp"
+                    android:id="@+id/rb_laki">
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
         <EditText
             android:id="@+id/et_password"
             android:hint="Password"
@@ -72,7 +102,6 @@
             android:layout_marginTop="8dp"
             android:inputType="textPassword" />
 
-        <!-- Konfirmasi Password -->
         <EditText
             android:id="@+id/et_confirm_password"
             android:hint="Konfirmasi Password"
@@ -81,9 +110,15 @@
             android:layout_marginTop="8dp"
             android:inputType="textPassword" />
 
-        <!-- Tombol Daftar -->
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SK"
+            android:text="Saya setuju dengan Syarat dan Ketentuan">
+        </CheckBox>
+
         <Button
-            android:id="@+id/btn_register_submit"
+            android:id="@+id/btn_register"
             android:text="Daftar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

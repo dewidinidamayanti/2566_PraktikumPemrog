@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:padding="20dp">
 
     <ImageView
         android:layout_width="200dp"
@@ -11,57 +11,49 @@
         android:src="@drawable/logoamikom"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="30dp">
-    </ImageView>
-
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:textSize="30dp"
-        android:layout_gravity="center">
-    </TextView>
+        android:textSize="30sp"
+        android:layout_gravity="center" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username">
-    </TextView>
+        android:text="@string/label_username" />
 
     <EditText
+        android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
-        android:id="@+id/et_username">
-    </EditText>
+        android:hint="@string/hint_username" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password">
-    </TextView>
+        android:text="@string/label_password" />
 
     <EditText
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:id="@+id/et_password">
-    </EditText>
+        android:hint="@string/hint_password"
+        android:inputType="textPassword" />
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/btn_login"
         android:layout_gravity="center"
-        android:backgroundTint="@color/purple_amikom"
-        android:hint="Login"
-        android:id="@+id/et_btn_login">
-    </Button>
+        android:backgroundTint="@color/purple_amikom" />
 
     <TextView
         android:id="@+id/tv_register"
-        android:text="Belum punya akun? Daftar di sini"
+        android:text="@string/register_prompt"
         android:textSize="16sp"
         android:textColor="@android:color/holo_blue_dark"
         android:layout_width="wrap_content"
@@ -69,8 +61,5 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:focusable="true" >
-    </TextView>
-
-
+        android:focusable="true" />
 </LinearLayout>
