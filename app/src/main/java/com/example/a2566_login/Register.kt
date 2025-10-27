@@ -21,6 +21,7 @@ class Register : AppCompatActivity() {
         val rbLaki: RadioButton = findViewById(R.id.rb_laki)
         val rbPerempuan: RadioButton = findViewById(R.id.rb_perempuan)
         val cbSk: CheckBox = findViewById(R.id.SK)
+        val spDomisili: Spinner = findViewById(R.id.sp_domisili)
         val btnRegister: Button = findViewById(R.id.btn_register)
 
         // Aksi tombol "Daftar"
@@ -57,12 +58,16 @@ class Register : AppCompatActivity() {
                     Toast.makeText(this, "Harap setujui syarat & ketentuan", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    // Tampilkan hasil di Toast sesuai instruksi tugas
+                    // Ambil pilihan dari Spinner
+                    val domisili = spDomisili.selectedItem.toString()
+
+                    // Tampilkan semua hasil input termasuk domisili
                     Toast.makeText(
                         this,
-                        "Jenis Kelamin: $gender, Setuju: $isAgreed",
+                        "Jenis Kelamin: $gender\nDomisili: $domisili\nSetuju: $isAgreed",
                         Toast.LENGTH_LONG
                     ).show()
+
 
                     // Pindah ke halaman Login
                     val intent = Intent(this, Login::class.java)

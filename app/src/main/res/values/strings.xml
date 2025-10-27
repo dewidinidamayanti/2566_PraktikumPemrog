@@ -10,6 +10,15 @@
     <string name="btn_login">Login</string>
     <string name="register_prompt">Belum punya akun? Daftar di sini</string>
 
+    <string name="label_domisili">Domisili</string>
+
+    <string-array name="daftar_kota">
+        <item>Yogyakarta</item>
+        <item>Jakarta</item>
+        <item>Surabaya</item>
+        <item>Bandung</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

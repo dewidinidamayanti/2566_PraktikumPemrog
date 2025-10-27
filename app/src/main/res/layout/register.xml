@@ -94,6 +94,22 @@
             </RadioGroup>
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_domisili"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/sp_domisili"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:spinnerMode="dropdown"
+            android:entries="@array/daftar_kota" />
+
+
         <EditText
             android:id="@+id/et_password"
             android:hint="Password"
