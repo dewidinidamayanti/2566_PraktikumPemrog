@@ -7,6 +7,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class Dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +27,26 @@ class Dashboard : AppCompatActivity() {
         }
 
         // Tampilkan fragment dashboard_fragment.xml lewat DashboardFragment
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, DashboardFragment())
-            .commit()
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.fragment_container, DashboardFragment())
+//            .commit()
+
+        val rvMahasiswa: RecyclerView = findViewById(R.id.rv_mahasiswa)
+
+        val dataMahasiswa = arrayListOf(
+            Mahasiswa("Dewi Dini Damayanti", "25.22.2566"),
+            Mahasiswa("Haikal", "22.02.0914"),
+            Mahasiswa("Jenova", "22.02.0900"),
+            Mahasiswa("Diandra", "22.02.0878"),
+            Mahasiswa("Lana", "22.02.0888")
+        )
+
+
+        // rvMahasiswa.layoutManager = LinearLayoutManager(this)
+
+        rvMahasiswa.layoutManager = GridLayoutManager(this, 2)
+
+        val adapter = MahasiswaAdapter(dataMahasiswa)
+        rvMahasiswa.adapter = adapter
     }
 }
