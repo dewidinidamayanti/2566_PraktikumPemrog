@@ -9,14 +9,16 @@
     <string name="hint_password">Masukkan Password</string>
     <string name="btn_login">Login</string>
     <string name="register_prompt">Belum punya akun? Daftar di sini</string>
+    <string name="welcome_message">Selamat Datang!</string>
 
     <string name="label_domisili">Domisili</string>
 
-    <string-array name="daftar_kota">
+    <string-array name="nama_array_kota">
         <item>Yogyakarta</item>
         <item>Jakarta</item>
         <item>Surabaya</item>
         <item>Bandung</item>
+        <item>Ngawi</item>
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
